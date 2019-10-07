@@ -51,10 +51,10 @@ namespace Producks.Web.Controllers
         }
 
         // GET: api/Products
-        [HttpGet("api/Products")]
-        public async Task<IActionResult> GetProducts()
+        [HttpGet("api/Products/{id?}")]
+        public async Task<IActionResult> GetProducts(int? id)
         {
-            var Products = await _context.Products
+            var Products = await _context.Products.Where(p => p.CategoryId == id || id == null)
                                        .Select(p => new ProductsDto
                                        {
                                            Id = p.Id,
