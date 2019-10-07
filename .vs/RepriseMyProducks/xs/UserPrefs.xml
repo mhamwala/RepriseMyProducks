@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{303533C7-5BBD-4B20-A509-9AB1C2FDF57E}|Default">
+  <MonoDevelop.Ide.ItemProperties.Producks.Web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Producks.Data/Category.cs">
+    <Files>
+      <File FileName="Producks.Web/Controllers/ExportsController.cs" Line="27" Column="65" />
+      <File FileName="Producks.Web/Controllers/BrandsController.cs" Line="25" Column="10" />
+      <File FileName="Producks.Data/StoreDbInitialiser.cs" Line="1" Column="1" />
+      <File FileName="Producks.Data/Category.cs" Line="13" Column="1" />
+      <File FileName="Producks.Web/Models/BrandDto.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RepriseMyProducks" expanded="True">
+            <Node name="Producks.Data" expanded="True">
+              <Node name="Brand.cs" selected="True" />
+            </Node>
+            <Node name="Producks.Web" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

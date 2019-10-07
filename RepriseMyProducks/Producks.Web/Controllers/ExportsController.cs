@@ -33,5 +33,21 @@ namespace Producks.Web.Controllers
                                        .ToListAsync();
             return Ok(brands);
         }
+
+        // GET: api/Categories
+        [HttpGet("api/Categories")]
+        public async Task<IActionResult> GetCategories()
+        {
+            var Categories = await _context.Categories
+                                       .Select(c => new CategoryDto
+                                       {
+                                           Id = c.Id,
+                                           Name = c.Name,
+                                           Active = c.Active,
+                                           Description = c.Description
+                                       })
+                                       .ToListAsync();
+            return Ok(Categories);
+        }
     }
 }
