@@ -20,10 +20,10 @@ namespace Producks.Web.Controllers
         }
 
         // GET: api/Brands
-        [HttpGet("api/Brands")]
-        public async Task<IActionResult> GetBrands()
+        [HttpGet("api/Brands/{id?}")]
+        public async Task<IActionResult> GetBrands(int? id)
         {
-            var brands = await _context.Brands
+            var brands = await _context.Brands.Where(b => b.Id == id || id == null)
                                        .Select(b => new BrandDto
                                        {
                                            Id = b.Id,
