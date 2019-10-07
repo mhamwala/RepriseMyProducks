@@ -51,10 +51,10 @@ namespace Producks.Web.Controllers
         }
 
         // GET: api/Products
-        [HttpGet("api/Products/{id?}")]
-        public async Task<IActionResult> GetProducts(int? id)
+        [HttpGet("api/Products")]
+        public async Task<IActionResult> GetProducts(int? categoryId, int? min, int? max)
         {
-            var Products = await _context.Products.Where(p => p.CategoryId == id || id == null)
+            var Products = await _context.Products.Where(p => (p.Price <= max && p.Price >= min) && (p.CategoryId == categoryId || categoryId == null))
                                        .Select(p => new ProductsDto
                                        {
                                            Id = p.Id,
