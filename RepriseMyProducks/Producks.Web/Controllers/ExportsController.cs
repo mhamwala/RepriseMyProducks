@@ -49,5 +49,25 @@ namespace Producks.Web.Controllers
                                        .ToListAsync();
             return Ok(Categories);
         }
+
+        // GET: api/Products
+        [HttpGet("api/Products")]
+        public async Task<IActionResult> GetProducts()
+        {
+            var Products = await _context.Products
+                                       .Select(p => new ProductsDto
+                                       {
+                                           Id = p.Id,
+                                           Name = p.Name,
+                                           Active = p.Active,
+                                           Description = p.Description,
+                                           BrandId = p.BrandId,
+                                           Price = p.Price,
+                                           StockLevel = p.StockLevel,
+                                           CategoryId = p.CategoryId
+                                       })
+                                       .ToListAsync();
+            return Ok(Products);
+        }
     }
 }
